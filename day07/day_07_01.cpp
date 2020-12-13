@@ -5,27 +5,15 @@
 #include <string>
 #include <vector>
 #include <utility>
-#include <unordered_map>
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <vector>
 #include <cstdlib>
-#include <regex>
 #include <deque>
-
-typedef std::vector<std::pair<std::string, size_t>> bagTor;
-typedef std::unordered_map<std::string, bagTor> bagMap;
 
 namespace
 {
-  template <typename T>
-  void print_iterable(T const &vec)
-  {
-    for (const auto &a : vec)
-      std::cout << a.first << ' ' << a.second << ' ';
-  }
-
   struct Edge
   {
     std::string target;
@@ -63,7 +51,7 @@ namespace
       rules[pos - rules.begin()].to.push_back(Edge{matches[2].str(), std::stoi(matches[1].str())});
       searchStart = matches.suffix().first;
     }
-  } // namespace
+  }
 
   void add_reverse_edges(std::vector<Bag> &rules)
   {
