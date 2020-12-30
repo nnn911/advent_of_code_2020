@@ -162,7 +162,7 @@ int main()
   {
     std::string fname{"day_13_01.data"};
     Lines lines{read_file(fname)};
-    std::cout << "It works in theory - but is way too slow!"
+    std::cout << "It works in theory - but is way too slow!";
     // std::cout << "Processing " << fname << " this may take a while!" << std::endl;
     // unsigned long long start_value{99999999999708};
     // std::cout << "Best bus to take from: " << fname << " is " << align_schedule(lines, start_value) << '\n';
